@@ -18,17 +18,17 @@ public class Equipe implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "cd_equipe")
-	private Long id;
+	private Long idEquipe;
 	
 	@Column(name = "nome_equipe")
 	private String nomeDaEquipe;
 
-	public Long getId() {
-		return id;
+	public Long getIdEquipe() {
+		return idEquipe;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setIdEquipe(Long idEquipe) {
+		this.idEquipe = idEquipe;
 	}
 
 	public String getNomeDaEquipe() {
