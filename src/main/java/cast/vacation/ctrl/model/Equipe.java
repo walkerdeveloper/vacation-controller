@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "equipe")
@@ -21,6 +22,7 @@ public class Equipe implements Serializable {
 	private Long idEquipe;
 	
 	@Column(name = "nome_equipe")
+	@NotNull
 	private String nomeDaEquipe;
 
 	public Long getIdEquipe() {
@@ -40,7 +42,10 @@ public class Equipe implements Serializable {
 	}
 	
 	
-	
+	@Override
+	public String toString() {
+		return "Id: " + this.getIdEquipe() + "\nNome: " + this.getNomeDaEquipe();
+	}
 	
 
 }
