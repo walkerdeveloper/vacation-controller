@@ -13,7 +13,7 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "funcionario")
-public class Funcionario implements Serializable{
+public class Funcionario implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -21,30 +21,38 @@ public class Funcionario implements Serializable{
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "cd_func")
 	private Long idFuncionario;
-	
+
 	@NotNull
 	@Column(name = "nm_funcionario")
 	private String nomeFuncionario;
-	
+
 	@Embedded
 	private Endereco endereco;
-	
-	
+
 	public Long getIdFuncionario() {
 		return idFuncionario;
 	}
+
 	public void setIdFuncionario(Long idFuncionario) {
 		this.idFuncionario = idFuncionario;
 	}
+
 	public String getNomeFuncionario() {
 		return nomeFuncionario;
 	}
+
 	public void setNomeFuncionario(String nomeFuncionario) {
 		this.nomeFuncionario = nomeFuncionario;
 	}
-	
+
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
+	}
 	
 	
 
-	
 }
