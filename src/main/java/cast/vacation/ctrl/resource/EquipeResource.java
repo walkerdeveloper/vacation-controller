@@ -50,4 +50,9 @@ public class EquipeResource {
 		
 		return ResponseEntity.status(HttpStatus.CREATED).body(equipeSalva);
 	}
+	
+	@GetMapping("/teste")
+	public List<String> teste(){
+		return equipeRepository.teste();
+	}
 }
